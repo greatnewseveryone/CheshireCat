@@ -61,6 +61,13 @@ for (ind in dat$ind){
   dat_all= rbind(dat_all, dat_ind)
 }
 
+
+# Alice in Wonderland
+png('./plots/alicesAdventures.png')
+plot_ind(11, dat_all)
+dev.off()
+
+
 # expect infinite values when peaks/troughs aren't present in the segment
 peak_distances= rbind(dat_all[,list(cat_sighting= cat_sighting,
                                             timeline= timeline, 
